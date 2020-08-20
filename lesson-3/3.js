@@ -16,14 +16,18 @@
 // Решение
 
 function truncate (string, maxLength) {
-    if(typeof string !== 'string' && typeof maxLength !== 'Number') {
-        return;
+    if(typeof string !== 'string' || typeof maxLength !== 'number') {
+        throw new Error('We need string and number!');
     }
 
     const stringLength = string.length;
+
     if (stringLength > maxLength) {
-        let slicedString = string.slice(0, maxLength - 3) + '...';
+        const slicedString = string.slice(0, maxLength - 3) + '...';
+
         return slicedString;       
+    } else {
+        return string;
     }
 }
 

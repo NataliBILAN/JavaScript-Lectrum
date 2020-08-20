@@ -14,12 +14,10 @@
 
 function checkSpam (source, example) {
     if (typeof source !== 'string' && typeof example !== 'string') {
-        console.log(typeof source);
-        console.log(typeof example);
-        return;
+        throw new Error('it\'s not a string!');
     } else {
-        let sourceInLowCase = source.toLowerCase();
-        let exampleInLowCase = example.toLowerCase();
+        const sourceInLowCase = source.toLowerCase();
+        const exampleInLowCase = example.toLowerCase();
     
         return sourceInLowCase.includes(exampleInLowCase);
     }    

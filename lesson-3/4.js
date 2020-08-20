@@ -19,7 +19,9 @@ function extractCurrencyValue(source) {
     if (typeof source !== 'string') {
         return null;
     }
-    let value = source.slice(1);
+
+    const value = source.slice(1);
+    
     return Number(value);
 }
 

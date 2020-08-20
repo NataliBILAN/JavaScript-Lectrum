@@ -13,10 +13,11 @@
 
 function upperCaseFirst (string) {
     if (typeof string !== 'string') {
-        return;
+        throw new Error('it\'s not a string!');
     }
     
     const newString = string.charAt(0).toUpperCase() + string.slice(1);
+    
     return newString;
 }
 
