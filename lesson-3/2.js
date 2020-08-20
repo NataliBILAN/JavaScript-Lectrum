@@ -13,7 +13,7 @@
 // Решение
 
 function checkSpam (source, example) {
-    if (typeof source !== 'string' && typeof example !== 'string') {
+    if (typeof source !== 'string' || typeof example !== 'string') {
         throw new Error('it\'s not a string!');
     } 
     
