@@ -25,7 +25,8 @@ const value = 'c';
 
 if (value === 'a') {
     console.log('a');
-} if (value === 'b' || 'c' || 'd' || 'e') {
+}
+else if (value === 'b' || 'c' || 'd' || 'e') {
     console.log('others');
 } else {
     console.log('unknown');
