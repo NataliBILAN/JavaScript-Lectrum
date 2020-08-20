@@ -26,9 +26,9 @@ function truncate (string, maxLength) {
         const slicedString = string.slice(0, maxLength - 3) + '...';
 
         return slicedString;       
-    } else {
-        return string;
-    }
+    } 
+
+    return string;   
 }
 
 truncate('Вот, что мне хотелось бы сказать на эту тему:', 21); // 'Вот, что мне хотел...'

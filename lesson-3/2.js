@@ -15,12 +15,12 @@
 function checkSpam (source, example) {
     if (typeof source !== 'string' && typeof example !== 'string') {
         throw new Error('it\'s not a string!');
-    } else {
-        const sourceInLowCase = source.toLowerCase();
-        const exampleInLowCase = example.toLowerCase();
+    } 
     
-        return sourceInLowCase.includes(exampleInLowCase);
-    }    
+    const sourceInLowCase = source.toLowerCase();
+    const exampleInLowCase = example.toLowerCase();
+
+    return sourceInLowCase.includes(exampleInLowCase); 
 }
 
 checkSpam('pitterXXX@gmail.com', 'xxx'); // true
