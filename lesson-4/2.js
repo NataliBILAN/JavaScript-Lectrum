@@ -22,24 +22,20 @@ const person = {};
 Object.defineProperties(person, {
     rate: {
         value: null,
-        writable: true,
-        configurable: false,
-        enumerable: false,    
+        writable: true,   
     },
 
     salary: {
-        enumerable: false,
-        configurable: false,
 
         get () {
             if(this.rate !== null) {
                 const today = new Date();
                 const dayOfTheCurrentMonth = today.getDate();
                 
-                return console.log(this.rate*dayOfTheCurrentMonth);
+                return this.rate*dayOfTheCurrentMonth;
             }
 
-            return console.log(0);  
+            return 0;  
         }
     }
 })
@@ -53,7 +49,7 @@ person.rate = 30;
 
 // Предположим что сегодня 10 января, в этом случае это свойство возвращает число 300
 person.salary;
-// delete person.salary;
 
+// delete person.salary;
 
 exports.person = person;

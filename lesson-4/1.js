@@ -24,15 +24,14 @@ const person = {
         console.log(`There\'re ${daysInCurrentMonth} days in current month!` );
 
         if ((daysInCurrentMonth - dayOfTheCurrentMonth) > 20) {
-            return  console.log('good salary');
+            return  'good salary';
         }
 
-        return  console.log('bad salary');   
+        return  'bad salary';   
     }
 };
 
 // Решение
-
 person.salary; // good salary
 
 exports.person = person;
