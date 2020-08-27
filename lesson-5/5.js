@@ -17,13 +17,7 @@ const isPositive = function (num) {
         throw new Error('It should be a number!')
     }
 
-    if (num > 0) {
-        return true;
-    } else if (num < 0) {
-        return false;
-    }
-    
-    return 0;    
+    return num > 0;
 }
 
 isPositive(-3); // false

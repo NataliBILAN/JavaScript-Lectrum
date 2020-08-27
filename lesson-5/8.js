@@ -22,12 +22,17 @@ const f = function (array) {
         throw new Error('It\'s not an array!');
     }
 
-    if (array.length) {        
-        console.log(Number(array.splice(0,1)));
-        f(array);
-    } else {
+    if(!array.length) {
         throw new Error('Array is empty!');
     }
+
+    console.log(Number(array.splice(0,1)));
+
+    if (array.length) {        
+        f(array);        
+    }
+
+    return;
 }
 
 f([1, 2, 3]);
