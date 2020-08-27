@@ -11,7 +11,7 @@
 
 const f = function (a, b, c) {
     for (let i = 0; i < arguments.length; i++) {
-        if (typeof arguments[i] !=='number') {
+        if (typeof arguments[i] !== 'number') {
             throw new Error('Some of arguments is not a number!');
         }
     }

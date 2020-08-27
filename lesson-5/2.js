@@ -13,7 +13,7 @@ function f () {
     let sum = 0;
 
     for (let i = 0; i < arguments.length; i++) {
-        if (typeof arguments[i] !=='number') {
+        if (typeof arguments[i] !== 'number') {
             throw new Error('Some of arguments is not a number!');
         }
 

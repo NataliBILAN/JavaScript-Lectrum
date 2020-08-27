@@ -10,7 +10,7 @@
 // Решение
 
 function f (num) {
-    if (typeof num !=='number') {
+    if (typeof num !== 'number') {
         throw new Error('It\'s not a number!');
     }
 
