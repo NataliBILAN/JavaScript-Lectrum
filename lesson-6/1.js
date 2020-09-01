@@ -37,7 +37,7 @@ const forEach = function (ar,cb) {
     checkFunction(cb);
 
     for(let i = 0; i < ar.length; i++) {
-        cb(ar[i]);
+        cb(ar[i], i, ar);
     }
 }
 

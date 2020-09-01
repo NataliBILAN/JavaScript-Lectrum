@@ -37,7 +37,7 @@ const some = function (ar, cb) {
     checkFunction(cb);
 
     for (let i = 0; i < ar.length; i++) {
-        if (cb(ar[i])) {            
+        if (cb(ar[i], i, ar)) {            
             return true;
         }
     }

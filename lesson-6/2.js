@@ -39,7 +39,7 @@ const filter = function (ar, cb) {
     const foundElements = [];
 
     for(let i = 0; i < ar.length; i++) {
-        if (cb(ar[i])) {
+        if (cb(ar[i], i, ar)) {
             foundElements.push(ar[i]);
         }        
     }
