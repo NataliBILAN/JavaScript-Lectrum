@@ -27,7 +27,7 @@ const checkArray = function (arr) {
 }
 
 const checkNumber = function (array) {
-   const correctNumber = array.flat(Infinity).every(item => typeof item === 'number');
+   const correctNumber = array.flat(Number.MAX_SAFE_INTEGER).every(item => typeof item === 'number');
 
    if (!correctNumber) {
        throw new Error ('All arguments should be numbers!');
@@ -38,13 +38,11 @@ const collect = function (array) {
     checkArray(array);
     checkNumber(array);
 
-    const flattened = array.flat(Infinity);
+    const flattened = array.flat(Number.MAX_SAFE_INTEGER);
 
-    const result = flattened.map(item => typeof item === 'number' ? item : 0)
-                            .reduce((sum, current) => sum + current, 0);
+    const result = flattened.reduce((sum, current) => sum + current, 0);
 
     return result;
-
 }
 
 const array1 = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]];

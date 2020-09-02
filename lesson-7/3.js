@@ -31,11 +31,9 @@ const createArray = function (value, length) {
     checkTypeOfFirstArgument(value);
     checkNumber(length);
 
-    const newArray = [];
+    const newArray = new Array(length);
 
-    for (let i = 0; i < length; i++) {
-        newArray.push(value);
-    }
+    newArray.fill(value);
 
     return newArray;
 }

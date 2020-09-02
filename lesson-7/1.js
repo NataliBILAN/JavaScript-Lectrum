@@ -40,8 +40,10 @@ const checkArray = function (arr) {
 const inspect = function (array) {
     checkArray(array);
 
-    return array.filter(item => typeof item === 'string')
-                .map(item => item.length);
+    const result = array.filter(item => typeof item === 'string')
+                        .map(item => item.length);
+
+    return result;
 }
 
 const result = inspect(array);
