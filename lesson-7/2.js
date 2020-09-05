@@ -40,7 +40,11 @@ const collect = function (array) {
 
     const flattened = array.flat(Number.MAX_SAFE_INTEGER);
 
-    const result = flattened.reduce((sum, current) => sum + current, 0);
+    if (!flattened.length) {
+        return 0;
+    }
+
+    const result = flattened.reduce((sum, current) => sum + current);
 
     return result;
 }
