@@ -48,7 +48,7 @@ const calculateAdvanced = function (...cbs) {
                 throw new Error(`callback at index ${i} did not return any value.`);     
             }  
 
-            result.value = cbs[i](result.value);  
+            result.value = returnedValue;  
 
         } catch (error) {
             result.errors.push({

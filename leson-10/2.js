@@ -36,6 +36,7 @@ const calculate = function (...cbs) {
       if (!result) {
             throw new Error('No result!');
       }
+      
       result = cbs[i](result); 
     }
     

@@ -37,8 +37,8 @@ const bind = function (func, obj) {
     checkFunction(func);
     checkContext(obj);
 
-    const restArgs = [].slice.call(arguments, 2);
-
+    const restArgs = Array.from(arguments).slice(2);
+    
     return function () {
         const functionArgs = [].slice.call(arguments);
 
