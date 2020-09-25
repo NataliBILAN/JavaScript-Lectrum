@@ -37,7 +37,7 @@ const createLogger = function () {
     const arrayOfresults = [];   
 
     return obj = {
-        call : function (fn, ...b) {
+        call: (fn, ...b) => {
             checkFn(fn);
 
             const result = fn(...b);   
@@ -52,7 +52,7 @@ const createLogger = function () {
             return result;
         },
 
-        print : function () {
+        print: () => {
             return arrayOfresults;
         }
     }

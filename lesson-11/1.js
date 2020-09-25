@@ -29,7 +29,7 @@ const createNumberGenerator = function () {
             arrayOfNumbers.push(randomNumber); 
         }
                
-        if (arrayOfNumbers.length >= 101) {
+        if (arrayOfNumbers.length > 100) {
             throw new Error ('There are no more numbers available.')
         }
 

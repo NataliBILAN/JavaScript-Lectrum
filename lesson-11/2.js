@@ -15,11 +15,10 @@ const createFibonacciGenerator = function () {
     let prev = 0;
     let next = 1;
 
-    const createFibonacci = () => {        
-        for(let i = 0; i < 1; i++){
+    const createFibonacci = () => {   
           next = prev + next;
           prev = next - prev;
-        }
+      
         return prev;
       }
 
