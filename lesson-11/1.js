@@ -23,7 +23,7 @@ const createNumberGenerator = function () {
     return function makeNumber () {
         const randomNumber = Math.floor(Math.random() * 100 + 1);
         
-        if (arrayOfNumbers.includes(randomNumber) && arrayOfNumbers.length >= 101) {
+        if (arrayOfNumbers.includes(randomNumber) && arrayOfNumbers.length > 100) {
             makeNumber();
         } else {
             arrayOfNumbers.push(randomNumber); 

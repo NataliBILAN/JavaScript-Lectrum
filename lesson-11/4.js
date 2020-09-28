@@ -36,7 +36,7 @@ const checkFn = function (arg) {
 const createLogger = function () {  
     const arrayOfresults = [];   
 
-    return obj = {
+    return {
         call: (fn, ...b) => {
             checkFn(fn);
 
