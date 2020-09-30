@@ -23,7 +23,7 @@ function Developer() {}
 
 Developer.prototype.completedTasks = [];
 Developer.prototype.completeTask = function(task) {
-    this.completedTasks = [task, ...this.completedTasks];
+    this.completedTasks = [...this.completedTasks, task];
 };
 
 const developer1 = new Developer();
