@@ -22,10 +22,9 @@
 
 Function.prototype.delay = function (ms) { 
     if (this.length) {
-        const self = this;
-    
-        return function (val1, val2) {
-            setTimeout(() => self.apply(this, [val1, val2]), ms);
+
+        return (val1, val2) => {
+            setTimeout(this, ms, val1, val2);
         }  
     } else {
            setTimeout(this, ms); 

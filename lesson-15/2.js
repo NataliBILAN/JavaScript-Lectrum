@@ -19,11 +19,12 @@
  * - Решить задачу в стиле прототипного наследования JavaScript.
  */
 
-function Developer() {}
+function Developer(completedTasks = []) {
+    this.completedTasks = completedTasks;
+}
 
-Developer.prototype.completedTasks = [];
 Developer.prototype.completeTask = function(task) {
-    this.completedTasks = [...this.completedTasks, task];
+    this.completedTasks.push(task);
 };
 
 const developer1 = new Developer();
