@@ -19,8 +19,8 @@
  * - Решить задачу в стиле прототипного наследования JavaScript.
  */
 
-function Developer(completedTasks = []) {
-    this.completedTasks = completedTasks;
+function Developer() {
+    this.completedTasks = [];
 }
 
 Developer.prototype.completeTask = function(task) {
