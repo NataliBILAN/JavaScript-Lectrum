@@ -32,21 +32,21 @@ class Worker {
         return this.#rate;
     }
 
-    getDays () {
-        return this.#days;
-    }
-
-    getSalary () {
-        return this.#rate * this.#days;
-    }
-
     setRate (rate) {
         this.#rate = rate;
+    }
+
+    getDays () {
+        return this.#days;
     }
 
     setDays (days) {
         this.#days = days;
     }
+
+    getSalary () {
+        return this.#rate * this.#days;
+    }    
 }
 
 const worker = new Worker('Walter', 'White', 10, 31);

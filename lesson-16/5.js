@@ -29,7 +29,7 @@
      }
 
      getName() {
-         return this.firstName + ' ' + this.lastName;
+         return `${this.firstName} ${this.lastName}`;
      }
  }
 
@@ -48,7 +48,7 @@
      }
  }
 
-const student = new Student('Water', 'White', 2015);
+const student = new Student('Walter', 'White', 2015);
 
 console.log(student.getName()); // Walter White
 console.log(student.getCourse()); // 4
