@@ -28,17 +28,17 @@ const validateParams = function (...args) {
 const postpone = function (start, end, delay) {
     validateParams(start, end, delay);
 
-    if (start < end) {
-        for(let i = start; i <= end; i++){
-            setTimeout(() => {
-                console.log(i);
-            }, delay);        
-        }
-    } else {
-        for(let i = start; i >= end; i--){
-            setTimeout(() => {
-                console.log(i);
-            }, delay);        
+    const diff = Math.abs(start - end);
+    let value = start;
+    
+    for (let i = 0; i <= diff; ++i) {
+        setTimeout((value) => {
+          console.log(value);
+        }, i * delay, value);
+        if (start < end) {
+            value++;
+        } else {
+            value--;
         }
     }
 }
