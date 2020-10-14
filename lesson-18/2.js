@@ -10,12 +10,14 @@
 
 // Решение
 class Customers {
-    constructor () {
-        this.customers = [];
+    #customers;
+
+    constructor (customers = []) {
+        this.#customers = customers;
     }
     
     *[Symbol.iterator]() {
-        const verifiedObjs = this.customers.filter((obj) => obj.verified == true);
+        const verifiedObjs = this.#customers.filter((obj) => obj.verified == true);
         
         for (const item of verifiedObjs) {
             yield item;
@@ -23,7 +25,7 @@ class Customers {
     }
 
     add (obj) {
-        this.customers.push(obj);
+        this.#customers.push(obj);
     }
 }
 

@@ -15,14 +15,16 @@
 // Решение
 
 class Customers {
-    constructor () {
-        this.customers = [];
+    #customers;
+
+    constructor (customers = []) {
+        this.#customers = customers;
     }
     
     [Symbol.iterator]() {
         let i = 0;
 
-        const verifiedObjs = this.customers.filter((obj) => obj.verified == true);
+        const verifiedObjs = this.#customers.filter((obj) => obj.verified == true);
 
         return {
 
@@ -39,7 +41,7 @@ class Customers {
     }
 
     add (obj) {
-        this.customers.push(obj);
+        this.#customers.push(obj);
     }
 }
 
