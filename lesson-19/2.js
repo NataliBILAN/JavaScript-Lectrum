@@ -17,7 +17,7 @@
 // Решение
 const getCustomers = (customers, countries) => {
     return new Promise(function(resolve, reject) {
-        const verifiedCustomers = customers.filter(item => item.verified === true);
+        const verifiedCustomers = customers.filter(item => item.verified);
         const result = verifiedCustomers.map((currentCustomer) => {
             const country = countries.find(item => {
                     return item.id === currentCustomer.id;             
@@ -29,7 +29,7 @@ const getCustomers = (customers, countries) => {
             return Object.assign({}, currentCustomer, country);
         })
 
-        if (result) {
+        if (result.length !== 0) {
             resolve(result);
         } 
     })

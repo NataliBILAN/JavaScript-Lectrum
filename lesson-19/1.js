@@ -17,9 +17,9 @@
 // Решение
 
 const isCustomerVerified = (obj) => {
-    return new Promise (function(resolve, reject)  {
-        if(Object.keys(obj).includes('verified') && (obj.verified = 'true')) {
-            resolve('true');
+    return new Promise ((resolve, reject) => {
+        if(obj.hasOwnProperty('verified')) {
+            resolve(true);
         }
 
         reject('Customer is not verified');
