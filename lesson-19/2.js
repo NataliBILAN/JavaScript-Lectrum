@@ -26,10 +26,10 @@ const getCustomers = (customers, countries) => {
                     reject(`We don't have information about country for this customer: ${currentCustomer.name}`);
                 }  
 
-            return Object.assign({}, currentCustomer, country);
+            return {...currentCustomer, ...country};
         })
 
-        if (result.length !== 0) {
+        if (result.length) {
             resolve(result);
         } 
     })
